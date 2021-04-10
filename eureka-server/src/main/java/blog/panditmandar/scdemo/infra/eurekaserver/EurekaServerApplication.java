@@ -1,4 +1,4 @@
-package com.example.scdemo.infra.eurekaserver;
+package blog.panditmandar.scdemo.infra.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

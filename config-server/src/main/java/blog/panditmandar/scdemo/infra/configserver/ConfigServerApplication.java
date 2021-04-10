@@ -1,4 +1,4 @@
-package com.example.scdemo.infra.configserver;
+package blog.panditmandar.scdemo.infra.configserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

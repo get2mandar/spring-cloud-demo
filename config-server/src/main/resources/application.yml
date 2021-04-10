@@ -13,4 +13,4 @@ server:
 logging:
   file: logs\config-server.log
   level:
-    com.example.scdemo.infra.configserver: DEBUG
+    blog.panditmandar.scdemo.infra.configserver: DEBUG

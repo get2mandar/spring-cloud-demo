@@ -2,4 +2,4 @@ server:
   port: 9761
 logging:
   level:
-    com.example.scdemo.infra.eurekaserver: DEBUG
+    blog.panditmandar.scdemo.infra.eurekaserver: DEBUG

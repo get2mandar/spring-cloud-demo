@@ -1,4 +1,4 @@
-package com.example.scdemo.infra.eurekaserver;
+package blog.panditmandar.scdemo.infra.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
