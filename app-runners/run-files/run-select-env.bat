@@ -1,8 +1,6 @@
 @ECHO OFF
 :BEGIN
 CLS
-:: SELECTENV COLOR (Background Black 0 - Text BrightWhite F)
-COLOR 0F
 
 IF "%env%" EQU "" GOTO SELECTENV
 IF "%env%" NEQ "" GOTO ENDENV
@@ -28,15 +26,5 @@ SET env=dev
 GOTO ENDENV
 
 :ENDENV
-IF %env%==dev (
-:: RunDev COLOR (Background Black 0 - Text LightGreen A)
-COLOR 0A
-)
-
-::IF %env%==prod (
-:: RunProd COLOR (Background Black 0 - Text LightRed C)
-::COLOR 0C
-::)
-
 ECHO Environment Selected  :%env%:
 ECHO.

@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class BookDataServiceApplication {
+public class BookDataApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookDataServiceApplication.class, args);
+		SpringApplication.run(BookDataApplication.class, args);
 	}
 	
 	@Bean

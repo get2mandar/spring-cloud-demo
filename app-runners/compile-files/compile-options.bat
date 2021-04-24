@@ -1,8 +1,6 @@
 @ECHO OFF
 :BEGIN
 CLS
-:: Compile COLOR (Background Black 0 - Text LightBlue 9)
-COLOR 09
 
 IF "%OPTMSG%" EQU "" GOTO SELECTOPT
 IF "%OPTMSG%" NEQ "" GOTO ENDENV
