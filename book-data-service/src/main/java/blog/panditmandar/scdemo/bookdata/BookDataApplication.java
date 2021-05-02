@@ -13,7 +13,7 @@ public class BookDataApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BookDataApplication.class, args);
 	}
-	
+
 	@Bean
 	public ModelMapper getModelMapper() {
 		return new ModelMapper();
