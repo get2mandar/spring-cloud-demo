@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "32337d7c-c3b9-412d-be5c-98264aae829a",
+		"name": "book-data-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "GET_AllBooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookDataURL}}/books",
+							"host": [
+								"{{bookDataURL}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_AllBooks_FullData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookDataURL}}/books/full",
+							"host": [
+								"{{bookDataURL}}"
+							],
+							"path": [
+								"books",
+								"full"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_BookByISBN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookDataURL}}/books/{{isbn}}",
+							"host": [
+								"{{bookDataURL}}"
+							],
+							"path": [
+								"books",
+								"{{isbn}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "publisher",
+			"item": [
+				{
+					"name": "GET_AllPublishers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookDataURL}}/publishers",
+							"host": [
+								"{{bookDataURL}}"
+							],
+							"path": [
+								"publishers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "author",
+			"item": [
+				{
+					"name": "GET_AllAuthors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{bookDataURL}}/authors",
+							"host": [
+								"{{bookDataURL}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
