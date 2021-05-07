@@ -7,7 +7,6 @@ spring:
         git:
           uri: https://github.com/get2mandar/spring-cloud-demo.git
           username: get2mandar
-          password: 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
           default-label: repo-based-config
           search-paths:
           - configstore/{application}
