@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "0dd742bd-2420-4ee4-aa79-bb7380a171e2",
+		"name": "SpringCloudDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book-data-service",
+			"item": [
+				{
+					"name": "books",
+					"item": [
+						{
+							"name": "GET_AllBooks",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/books",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET_AllBooks_FullData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/books/full",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"books",
+										"full"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET_BookByISBN",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/books/{{isbn}}",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"books",
+										"{{isbn}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "publishers",
+					"item": [
+						{
+							"name": "GET_AllPublishers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/publishers",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authors",
+					"item": [
+						{
+							"name": "GET_AllAuthors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/authors",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
