@@ -1,13 +1,16 @@
 spring:
   application:
     name: config-server
-  profiles:
-      active: native
   cloud:
     config:
       server:
-        native:
-          searchLocations: classpath:/config/{application}
+        git:
+          uri: https://github.com/get2mandar/spring-cloud-demo.git
+          username: get2mandar
+          password: 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
+          default-label: repo-based-config
+          search-paths:
+          - configstore/{application}
 server:
   port: 8888
 logging:
