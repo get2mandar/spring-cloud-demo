@@ -1,6 +1,8 @@
 @ECHO OFF
 :BEGIN
 CLS
+COLOR 5F
+
 TITLE RUN eureka-server
 CALL run-select-env.bat
 
