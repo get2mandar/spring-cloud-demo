@@ -6,6 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * API Response for All Book Entity Data
+ * 
+ * @author Mandar Pandit
+ *
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +22,5 @@ public class BookResponse implements Serializable {
 	private String isbn13;
 	private String isbn10;
 	private String title;
-	private String publisherId;
-	private String publisherName;
 
 }

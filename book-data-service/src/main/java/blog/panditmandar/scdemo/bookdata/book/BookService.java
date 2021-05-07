@@ -7,11 +7,13 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import blog.panditmandar.scdemo.bookdata.author.Author;
+import blog.panditmandar.scdemo.bookdata.author.AuthorRepository;
 import blog.panditmandar.scdemo.bookdata.publisher.Publisher;
 import blog.panditmandar.scdemo.bookdata.publisher.PublisherRepository;
 
 /**
- * Service Class for Book
+ * Service APIs for Book
  * 
  * @author Mandar Pandit
  *
@@ -24,36 +26,42 @@ public class BookService {
 
 	@Autowired
 	private BookRepository bookRepository;
-	
-	//@Autowired
-	//private AuthorRepository authorRepository;
+
+	@Autowired
+	private AuthorRepository authorRepository;
 
 	@Autowired
 	private PublisherRepository publisherRepository;
-	
-	
-	public BookResponse createBook(BookRequest bookRequest) {
+
+	public BookFullDataResponse createBook(BookRequest bookRequest) {
 		Book book = modelMapper.map(bookRequest, Book.class);
 		Publisher publisher = publisherRepository.getOne(bookRequest.getPublisherid());
 		book.setPublisher(publisher);
-		/*for (Long authorId : bookRequest.getAuthorIds()) {
+		for (Long authorId : bookRequest.getAuthorIds()) {
 			Author author = authorRepository.getOne(authorId);
 			book.getAuthors().add(author);
-		}*/
+		}
 		bookRepository.save(book);
-		return modelMapper.map(book, BookResponse.class);
+		return modelMapper.map(book, BookFullDataResponse.class);
 	}
-	
+
 	public List<BookResponse> getAllBooks() {
 		List<Book> allBooks = bookRepository.findAll();
-		List<BookResponse> bookResponseList = allBooks.stream()
-				.map(book -> modelMapper.map(book, BookResponse.class)).collect(Collectors.toList());
+		List<BookResponse> bookResponseList = allBooks.stream().map(book -> modelMapper.map(book, BookResponse.class))
+				.collect(Collectors.toList());
 		return bookResponseList;
 	}
-	
+
+	public List<BookFullDataResponse> getBooksAllAtOnce() {
+		List<Book> allBooks = bookRepository.findAll();
+		List<BookFullDataResponse> bookResponseList = allBooks.stream()
+				.map(book -> modelMapper.map(book, BookFullDataResponse.class)).collect(Collectors.toList());
+		return bookResponseList;
+	}
+
 	public BookResponse getOneBookByISBN(String isbn) {
 		Book book = bookRepository.findByIsbn13(isbn);
-		if(book == null) {
+		if (book == null) {
 			book = bookRepository.findByIsbn10(isbn);
 		}
 		return modelMapper.map(book, BookResponse.class);

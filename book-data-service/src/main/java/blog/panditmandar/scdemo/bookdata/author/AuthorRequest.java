@@ -1,11 +1,11 @@
-package blog.panditmandar.scdemo.bookdata.publisher;
+package blog.panditmandar.scdemo.bookdata.author;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * API Request for Create or Update Publisher
+ * API Request for Create or Update Author
  * 
  * @author Mandar Pandit
  *
@@ -13,7 +13,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PublisherRequest {
+public class AuthorRequest {
 
 	private String name;
+
 }

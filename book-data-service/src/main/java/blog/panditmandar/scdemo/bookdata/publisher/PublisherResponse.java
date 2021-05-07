@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * API Response for All Publisher Data
  * 
  * @author Mandar Pandit
  *
