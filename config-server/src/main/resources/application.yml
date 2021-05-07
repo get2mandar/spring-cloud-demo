@@ -5,8 +5,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/get2mandar/spring-cloud-demo.git
-          username: get2mandar
           default-label: repo-based-config
           search-paths:
           - configstore/{application}
