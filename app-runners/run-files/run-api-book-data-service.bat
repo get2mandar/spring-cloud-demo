@@ -20,7 +20,7 @@ GOTO RUNAPP
 :RUNAPP
 TITLE RUN book-data-service %PRTMSG%
 
-CD ../../book-data-service
+CD ../../apps-api/book-data-service
 
 CALL java -jar -Dspring.profiles.active=%env% -XX:+UseSerialGC -Xss512k target\book-data-service-0.1.jar
 

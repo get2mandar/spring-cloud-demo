@@ -20,9 +20,8 @@ GOTO RUNAPP
 :RUNAPP
 TITLE RUN eureka-server %PRTMSG%
 
-CD ../../eureka-server
+CD ../../apps-infra/eureka-server
 
-ECHO START
 CALL java -jar -Dspring.profiles.active=%env% -XX:+UseSerialGC -Xss512k target\eureka-server-0.1.jar
 
 
