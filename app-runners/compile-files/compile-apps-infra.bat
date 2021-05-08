@@ -3,12 +3,12 @@
 CLS
 CALL compile-options.bat
 
-TITLE COMPILE INFRA APPS %OPTMSG%
+TITLE COMPILE APPS INFRA _ %OPTMSG%
 
 ECHO START
 
 ECHO config-server
-CD ../../config-server
+CD ../../apps-infra/config-server
 CALL %command%
 
 
