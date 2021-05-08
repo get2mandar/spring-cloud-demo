@@ -26,5 +26,6 @@ SET env=dev
 GOTO ENDENV
 
 :ENDENV
+CLS
 ECHO Environment Selected  :%env%:
 ECHO.

@@ -3,12 +3,12 @@
 CLS
 CALL compile-options.bat
 
-TITLE COMPILE SERVICE APPS %OPTMSG%
+TITLE COMPILE APPS API _ %OPTMSG%
 
 ECHO START
 
 ECHO book-data-service
-CD ../../book-data-service
+CD ../../apps-api/book-data-service
 CALL %command%
 
 
