@@ -1,0 +1,9 @@
+server:
+  port: 9061
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9761/eureka/
+logging:
+  level:
+    blog.panditmandar.scdemo.bookcatalog: DEBUG

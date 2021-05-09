@@ -3,7 +3,7 @@
 CLS
 COLOR 5F
 
-TITLE RUN config-server 8888 native
+TITLE RUN config-server 8888 git-default
 
 CD ../../apps-infra/config-server
 

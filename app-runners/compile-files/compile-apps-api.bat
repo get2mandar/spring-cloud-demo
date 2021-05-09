@@ -12,6 +12,12 @@ CD ../../apps-api/book-data-service
 CALL %command%
 
 
+ECHO ------------
+ECHO book-added-info-service
+CD ../book-added-info-service
+CALL %command%
+
+
 ECHO DONE
 
 :END

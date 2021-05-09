@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+      - id: book-catalog-service
+        uri: lb://BOOK-CATALOG-SERVICE
+        predicates:
+        - Path=/catalog/**
+logging:
+  file: logs\edge-gateway.log
