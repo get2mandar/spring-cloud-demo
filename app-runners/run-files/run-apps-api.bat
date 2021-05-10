@@ -3,26 +3,35 @@
 CLS
 CALL run-select-env.bat
 
-TITLE RUN-API-SERVICE %env%
+TITLE RUN-API %env%
 
-ECHO book-data-service %env%
-ECHO Starting Book Data Service
-start cmd /c "CALL run-api-book-data-service.bat"
+SET apptype=apps-api
+SET color=1F
+
+:: RUN book-data-service
+SET port=9081
+if %env%==prod (
+	SET port=9281
+)
+start cmd /c "CALL run-service.bat book-data-service %port% %apptype% %color%"
 timeout /T 10 /NOBREAK>nul
 
-ECHO book-added-info-service %env%
-ECHO Starting Book Added Info Service
-start cmd /c "CALL run-api-book-added-info-service.bat"
-::timeout /T 10 /NOBREAK>nul
+
+:: RUN book-added-info-service
+SET port=9071
+if %env%==prod (
+	SET port=9271
+)
+start cmd /c "CALL run-service.bat book-added-info-service %port% %apptype% %color%"
+timeout /T 10 /NOBREAK>nul
 
 
-:: ECHO RUN INFRA edge-gateway %env%
-:: start cmd /c "CALL run-infra-edge-gateway.bat"
-:: timeout /T 10 /NOBREAK>nul
-
-:: ECHO RUN INFRA hystrix-dashboard %env%
-:: start cmd /c "CALL run-infra-hystrix-dashboard.bat"
-:: timeout /T 10 /NOBREAK>nul
+:: RUN book-catalog-service
+SET port=9061
+if %env%==prod (
+	SET port=9261
+)
+start cmd /c "CALL run-service.bat book-catalog-service %port% %apptype% %color%"
 
 
 :END

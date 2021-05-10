@@ -12,9 +12,17 @@ CD ../../apps-infra/config-server
 CALL %command%
 
 
+
 ECHO ------------
 ECHO eureka-server
 CD ../eureka-server
+CALL %command%
+
+
+
+ECHO ------------
+ECHO edge-gateway
+CD ../edge-gateway
 CALL %command%
 
 

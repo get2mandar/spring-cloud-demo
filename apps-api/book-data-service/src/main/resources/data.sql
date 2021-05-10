@@ -1,3 +1,4 @@
+/* Data for Entity Publisher */
 INSERT INTO publisher (name) VALUES
   ('Addison-Wesley'),
   ('Apress Media LLC'),
@@ -11,6 +12,7 @@ INSERT INTO publisher (name) VALUES
   ('Prentice-Hall Inc'),
   ('Wiley Publishing Inc');
 
+/* Data for Entity Author */
 INSERT INTO author (name) VALUES
   ('Herbert Schildt'),
   ('Richard F. Raposa'),
@@ -26,6 +28,7 @@ INSERT INTO author (name) VALUES
   ('Patrick Niemeyer'),
   ('Bryan Basham');
   
+/* Data for Entity Book */
 INSERT INTO book (isbn13, isbn10, title, publisherid) VALUES
   ('9780071808569', '0071808566', 'Java: The Complete Reference, Ninth Edition', 5),
   ('9780471423140', '0471423149', 'Java in 60 Minutes A Day', 11),
@@ -38,6 +41,7 @@ INSERT INTO book (isbn13, isbn10, title, publisherid) VALUES
   ('9781565927186', '1565927184', 'Learning Java', 6),
   ('9780596516680', '0596516681', 'Head First Servlets and JSP', 6);
 
+/* Data for Many-To-Many Mapping of Book and Author */
 INSERT INTO book_authors (bookid, authorid) VALUES
   (1, 1),
   (2, 2),
