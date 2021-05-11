@@ -11,25 +11,23 @@ SET color=1F
 :: RUN book-data-service
 SET port=9081
 if %env%==prod (
-	SET port=9281
+	SET port=8281
 )
-start cmd /c "CALL run-service.bat book-data-service %port% %apptype% %color%"
-timeout /T 10 /NOBREAK>nul
+CALL run-multi-instance.bat book-data-service %port% %apptype% %color%
 
 
 :: RUN book-added-info-service
 SET port=9071
 if %env%==prod (
-	SET port=9271
+	SET port=8271
 )
-start cmd /c "CALL run-service.bat book-added-info-service %port% %apptype% %color%"
-timeout /T 10 /NOBREAK>nul
+CALL run-multi-instance.bat book-added-info-service %port% %apptype% %color%
 
 
 :: RUN book-catalog-service
 SET port=9061
 if %env%==prod (
-	SET port=9261
+	SET port=8261
 )
 start cmd /c "CALL run-service.bat book-catalog-service %port% %apptype% %color%"
 

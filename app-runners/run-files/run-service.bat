@@ -12,7 +12,7 @@ COLOR %color%
 
 
 TITLE RUN %ServiceName%
-::CALL run-select-env.bat
+
 
 IF %env% EQU dev GOTO DEVPRT
 IF %env% EQU prod GOTO PRODPRT
@@ -30,7 +30,7 @@ TITLE RUN %ServiceName% %PRTMSG%
 
 CD ../../%AppType%/%ServiceName%
 
-CALL java -jar -Dspring.profiles.active=%env% -XX:+UseSerialGC -Xss512k target\%ServiceName%-0.1.jar
+CALL java -jar -Dspring.profiles.active=%env% -Dserver.port=%Port% -XX:+UseSerialGC -Xss512k target\%ServiceName%-0.1.jar
 
 
 :END
