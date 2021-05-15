@@ -1,6 +1,7 @@
 package blog.panditmandar.scdemo.bookdata;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -41,6 +42,9 @@ public class BookDataController {
 
 	@Autowired
 	AuthorService authorService;
+
+	@Autowired
+	private PropertyConfiguration propertyConfiguration;
 
 	@PostMapping("/publishers")
 	public ResponseEntity<PublisherResponse> createPublisher(@Valid @RequestBody PublisherRequest publisherRequestDTO) {
@@ -99,6 +103,7 @@ public class BookDataController {
 	@GetMapping(path = "/books/full")
 	public ResponseEntity<List<BookFullDataResponse>> getBooksAllAtOnce() {
 		List<BookFullDataResponse> allBooks = bookService.getBooksAllAtOnce();
+		allBooks.stream().limit(propertyConfiguration.getMax()).collect(Collectors.toList());
 		return ResponseEntity.ok(allBooks);
 	}
 

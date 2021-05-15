@@ -5,3 +5,5 @@ eureka:
 logging:
   level:
     blog.panditmandar.scdemo.bookdata: DEBUG
+limit:
+  max: 5

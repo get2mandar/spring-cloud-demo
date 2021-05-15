@@ -5,3 +5,5 @@ eureka:
 logging:
   level:
     blog.panditmandar.scdemo.bookdata: INFO
+limit:
+  max: 3
