@@ -103,7 +103,9 @@ public class BookDataController {
 	@GetMapping(path = "/books/full")
 	public ResponseEntity<List<BookFullDataResponse>> getBooksAllAtOnce() {
 		List<BookFullDataResponse> allBooks = bookService.getBooksAllAtOnce();
-		allBooks.stream().limit(propertyConfiguration.getMax()).collect(Collectors.toList());
+		if (propertyConfiguration.getMax() > 0) {
+			allBooks = allBooks.stream().limit(propertyConfiguration.getMax()).collect(Collectors.toList());
+		}
 		return ResponseEntity.ok(allBooks);
 	}
 
