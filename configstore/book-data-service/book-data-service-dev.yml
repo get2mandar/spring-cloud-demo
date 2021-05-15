@@ -6,4 +6,4 @@ logging:
   level:
     blog.panditmandar.scdemo.bookdata: DEBUG
 limit:
-  max: 5
+  max: 0
