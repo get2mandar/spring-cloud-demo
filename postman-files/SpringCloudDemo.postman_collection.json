@@ -63,6 +63,32 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "POST_CreateBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isbn13\": \"9781491943915\",\r\n    \"isbn10\": \"1491943912\",\r\n    \"title\": \"Modern Java EE Design Patterns\",\r\n    \"authorIds\": [\r\n        4,\r\n        6\r\n    ],\r\n    \"publisherid\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{bookDataURL}}/books",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -74,6 +100,50 @@
 							"request": {
 								"method": "GET",
 								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/publishers",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"publishers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET_AllPublisher_ByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/publishers/{{pubid}}",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"publishers",
+										"{{pubid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST_CreatePublisher",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Test Publisher 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{bookDataURL}}/publishers",
 									"host": [
@@ -103,6 +173,82 @@
 									],
 									"path": [
 										"authors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET_AllAuthor_ByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{bookDataURL}}/authors/{{auid}}",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"authors",
+										"{{auid}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST_CreateAuthor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Test Author 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{bookDataURL}}/authors",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"authors"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "actuator",
+					"item": [
+						{
+							"name": "refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{bookDataURL}}/actuator/refresh",
+									"host": [
+										"{{bookDataURL}}"
+									],
+									"path": [
+										"actuator",
+										"refresh"
 									]
 								}
 							},
