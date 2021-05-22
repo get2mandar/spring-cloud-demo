@@ -5,11 +5,11 @@ spring:
     username: scdemo
     password: scdemopass
   jpa:
-    hibernate:
-      ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
+        jdbc:
+          batch_size: 20
   h2:
     console:
       enabled: true
