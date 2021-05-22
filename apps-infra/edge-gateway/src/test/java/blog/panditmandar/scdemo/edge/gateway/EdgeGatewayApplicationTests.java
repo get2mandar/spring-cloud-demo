@@ -1,4 +1,4 @@
-package blog.panditmandar.scdemo.gateway;
+package blog.panditmandar.scdemo.edge.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

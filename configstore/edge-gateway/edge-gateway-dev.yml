@@ -5,4 +5,4 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:9761/eureka/
   level:
-    blog.panditmandar.scdemo.gateway: DEBUG
+    blog.panditmandar.scdemo.edge.gateway: DEBUG
