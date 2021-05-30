@@ -1,2 +1,14 @@
+spring:
+  cloud:
+    discovery:
+      enabled: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+ribbon:
+  eureka:
+    enabled: true
 logging:
   file: logs\book-added-info-service.log
