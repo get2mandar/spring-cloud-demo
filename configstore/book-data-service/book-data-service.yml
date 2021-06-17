@@ -5,6 +5,7 @@ spring:
     username: scdemo
     password: scdemopass
   jpa:
+    deferDatasourceInitialization: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
