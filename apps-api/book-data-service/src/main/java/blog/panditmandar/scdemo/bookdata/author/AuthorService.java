@@ -15,13 +15,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AuthorService {
-	
+
 	@Autowired
 	private ModelMapper modelMapper;
 
 	@Autowired
 	private AuthorRepository authorRepository;
-	
+
 	public AuthorResponse createAuthor(AuthorRequest authorRequestDTO) {
 		Author author = modelMapper.map(authorRequestDTO, Author.class);
 		authorRepository.save(author);
@@ -36,7 +36,7 @@ public class AuthorService {
 	}
 
 	public AuthorResponse getOneAuthor(Long id) {
-		Author author = authorRepository.getOne(id);
+		Author author = authorRepository.getById(id);
 		return modelMapper.map(author, AuthorResponse.class);
 	}
 

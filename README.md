@@ -10,6 +10,12 @@ Spring Cloud Demo App
  - IDE: Spring Tool Suit (STS) version 3.9.4.RELEASE
  - OS: Windows
 
+### Tech Stack - Updates to Latest Version(s)
+>> Updated as on 22-May-2021
+ - Spring Boot version 2.5.0
+ - Spring Cloud version 2020.0.2
+
+
 
 ## Services
 All Services (except the config-server) have 2 spring profiles as ```dev``` and ```prod```. Upon selection in **_app-runners_** the whole application runs in the specific profile as  environment.
