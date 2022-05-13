@@ -24,7 +24,7 @@ GOTO ENDENV
 
 :NOTEST
 SET OPTMSG=NO UnitTests
-SET command=mvn clean package -DskipTests
+SET command=mvn -e clean package -DskipTests
 GOTO ENDENV
 
 :ENDENV

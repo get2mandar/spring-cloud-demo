@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: SB250SC202002Trial
+          default-label: main
           search-paths:
           - configstore/{application}
 server:

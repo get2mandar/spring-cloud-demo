@@ -3,3 +3,5 @@ spring:
     name: book-data-service
   config:
     import: optional:configserver:http://localhost:8888
+  jpa:
+    deferDatasourceInitialization: true
