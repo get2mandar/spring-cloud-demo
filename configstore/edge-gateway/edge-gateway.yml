@@ -12,5 +12,8 @@ spring:
         uri: lb://BOOK-CATALOG-SERVICE
         predicates:
         - Path=/catalog/**
+eureka:
+  instance:
+    hostname: localhost
 logging:
   file: logs\edge-gateway.log
