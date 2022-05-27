@@ -6,17 +6,12 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.NaturalId;
 
 import blog.panditmandar.scdemo.bookdata.author.Author;
 import blog.panditmandar.scdemo.bookdata.publisher.Publisher;
@@ -32,7 +27,7 @@ import lombok.NoArgsConstructor;
  *
  */
 @Entity
-@Table(name = "book", indexes = { @Index(name = "book_isbn13_index", columnList = "isbn13", unique = true) })
+@Table(name = "book")
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @AllArgsConstructor
@@ -40,12 +35,7 @@ import lombok.NoArgsConstructor;
 public class Book {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "bookid")
-	private Long id;
-
-	@NaturalId(mutable = false)
-	@Column(name = "isbn13", nullable = false, updatable = false, unique = true, length = 20)
+	@Column(name = "isbn13", length = 20)
 	@EqualsAndHashCode.Include
 	private String isbn13;
 
@@ -56,7 +46,7 @@ public class Book {
 	private String title;
 
 	@ManyToMany
-	@JoinTable(name = "book_authors", joinColumns = @JoinColumn(name = "bookid", referencedColumnName = "bookid"), inverseJoinColumns = @JoinColumn(name = "authorid", referencedColumnName = "authorid"))
+	@JoinTable(name = "book_authors", joinColumns = @JoinColumn(name = "isbn13", referencedColumnName = "isbn13"), inverseJoinColumns = @JoinColumn(name = "authorid", referencedColumnName = "authorid"))
 	private Set<Author> authors = new HashSet<>();
 
 	@ManyToOne(fetch = FetchType.LAZY)
