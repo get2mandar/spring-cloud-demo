@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import blog.panditmandar.scdemo.addedinfo.bookinfo.BookAddedInfoService;
@@ -18,18 +19,19 @@ import blog.panditmandar.scdemo.addedinfo.bookinfo.BookInfoResponse;
  *
  */
 @RestController
+@RequestMapping(path = "/bookinfo")
 public class BookAddedInfoController {
 
 	@Autowired
 	BookAddedInfoService bookAddedInfoService;
 
-	@GetMapping(path = "/bookinfo")
+	@GetMapping
 	public ResponseEntity<List<BookInfoResponse>> getAllBookAddedInfo() {
 		List<BookInfoResponse> allBookInfo = bookAddedInfoService.getAllBookInfo();
 		return ResponseEntity.ok(allBookInfo);
 	}
 
-	@GetMapping(path = "/bookinfo/{isbn}")
+	@GetMapping(path = "/{isbn}")
 	public ResponseEntity<BookInfoResponse> getBookAddedInfo(@PathVariable("isbn") String isbn) {
 		BookInfoResponse bookInfo = bookAddedInfoService.getOneBookInfoByISBN(isbn);
 		if (bookInfo == null) {

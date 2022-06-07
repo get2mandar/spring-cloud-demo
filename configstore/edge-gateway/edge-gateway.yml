@@ -12,6 +12,10 @@ spring:
         uri: lb://BOOK-CATALOG-SERVICE
         predicates:
         - Path=/catalog/**
+      - id: book-added-info-service
+        uri: lb://BOOK-ADDED-INFO-SERVICE
+        predicates:
+        - Path=/bookinfo/**
 eureka:
   instance:
     hostname: localhost
