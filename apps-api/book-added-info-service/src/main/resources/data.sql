@@ -2,7 +2,8 @@
 INSERT INTO binding (type) VALUES
   ('Paperback'),
   ('Kindle (Amazon)'),
-  ('ePUB');
+  ('ePUB'),
+  ('PDF');
 
 /* Data for Entity BookInfo */
 INSERT INTO book_info (isbn13, edition, pages, language, published, bindingid) VALUES
@@ -15,5 +16,8 @@ INSERT INTO book_info (isbn13, edition, pages, language, published, bindingid) V
   ('9781449365110', 2, 359, 'English', 'September 2013', 1),
   ('9781449331443', 2, 720, 'English', 'August 2005', 3),
   ('9781565927186', 1, 706, 'English', 'May 2000', 1),
-  ('9780596516680', 2, 879, 'English', 'April 2008', 1);
-  
+  ('9780596516680', 2, 879, 'English', 'April 2008', 1),
+  ('9781492043454', 1, 587, 'English', 'February 2020', 4),
+  ('9781492086895', 1, 668, 'English', 'December 2021', 4),
+  ('9781491924242', 1, 54, 'English', 'February 2015', 4),
+  ('9781118714706', 1, 795, 'English', 'May 2015', 4);

@@ -1,4 +1,4 @@
-package blog.panditmandar.scdemo.bookinfo.pojo;
+package blog.panditmandar.scdemo.addedinfo.binding;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
