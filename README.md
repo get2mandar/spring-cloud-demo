@@ -38,11 +38,13 @@ To know more details about the API Services Applications, check below the ```APP
 ## Execute Demo
 To execute the Demo Application, first use the APP-RUNNERS to compile or run the Applications, and then make use of the Postman files to check APIs.
 
-> with APP-RUNNERS
+ - With APP-RUNNERS
+
 Read more details on how to compile and run the various services in this Demo from ```APPS-RUN-README```.
 
 [APPS-RUN-README](app-runners/APPS-RUN-README.md)
 
 
-> with Postman Client
+ - With Postman Client
+
 Use the files from ```postman-files``` to run the APIs using a Postman API Testing Tool.
