@@ -1,6 +1,8 @@
 # spring-cloud-demo
 Spring Cloud Demo App
 
+Go Back to [DEMO-README](../README.md)
+
 ## Tech Stack - Updates
 Find below the details of Initial Tech Stack used to develop the Applications and over time, how the tech stack was upgraded to possible latest versions.
 
