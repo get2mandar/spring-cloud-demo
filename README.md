@@ -3,9 +3,7 @@ Spring Cloud Demo App
 
 
 ## Tech Stack
-Find the details of Technology Stack used to develop the Applications in this Demo.
-
-[TECH-STACK-README](docs/TECH-STACK-README.md)
+Find the details of Technology Stack used to develop the Applications in this Demo, with ```README``` file [TECH-STACK-README](docs/TECH-STACK-README.md).
 
 
 ## Project Settings
@@ -23,16 +21,11 @@ Upon selection in **_app-runners_** the whole application runs in the specific p
 
 
 ### Infrastructure Services
-To know more details about the Infrastructure Services, check below the ```APPS-INFRA-README```.
-
-[APPS-INFRA-README](apps-infra/APPS-INFRA-README.md)
+To know more details about the Infrastructure Services, check the ```README``` file [APPS-INFRA-README](apps-infra/APPS-INFRA-README.md).
 
 
 ### API Services
-To know more details about the API Services Applications, check below the ```APPS-API-README```.
-
-[APPS-API-README](apps-api/APPS-API-README.md)
-
+To know more details about the API Services Applications, check the ```README``` file [APPS-API-README](apps-api/APPS-API-README.md).
 
 
 ## Execute Demo
@@ -40,9 +33,7 @@ To execute the Demo Application, first use the APP-RUNNERS to compile or run the
 
  - With APP-RUNNERS
 
-Read more details on how to compile and run the various services in this Demo from ```APPS-RUN-README```.
-
-[APPS-RUN-README](app-runners/APPS-RUN-README.md)
+Read more details on how to compile and run the various services in this Demo with ```README``` file [APPS-RUN-README](app-runners/APPS-RUN-README.md).
 
 
  - With Postman Client
