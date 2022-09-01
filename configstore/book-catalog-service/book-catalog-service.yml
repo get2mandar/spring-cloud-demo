@@ -11,4 +11,4 @@ ribbon:
   eureka:
     enabled: true
 logging:
-  file: logs\book-added-info-service.log
+  file: logs\book-catalog-service.log

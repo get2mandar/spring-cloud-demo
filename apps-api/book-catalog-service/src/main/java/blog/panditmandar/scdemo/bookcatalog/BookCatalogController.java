@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import blog.panditmandar.scdemo.bookcatalog.data.BookDataClient;
+import blog.panditmandar.scdemo.bookcatalog.data.BookResponse;
+
 @RestController
 @RequestMapping("/catalog")
 public class BookCatalogController {

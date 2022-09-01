@@ -1,4 +1,4 @@
-package blog.panditmandar.scdemo.bookcatalog;
+package blog.panditmandar.scdemo.bookcatalog.data;
 
 import java.io.Serializable;
 
