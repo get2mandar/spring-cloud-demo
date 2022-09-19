@@ -35,10 +35,10 @@ public class BookService {
 
 	public BookFullDataResponse createBook(BookRequest bookRequest) {
 		Book book = modelMapper.map(bookRequest, Book.class);
-		Publisher publisher = publisherRepository.getById(bookRequest.getPublisherid());
+		Publisher publisher = publisherRepository.getReferenceById(bookRequest.getPublisherid());
 		book.setPublisher(publisher);
 		for (Long authorId : bookRequest.getAuthorIds()) {
-			Author author = authorRepository.getById(authorId);
+			Author author = authorRepository.getReferenceById(authorId);
 			book.getAuthors().add(author);
 		}
 		bookRepository.save(book);

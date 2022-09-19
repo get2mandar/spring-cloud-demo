@@ -36,7 +36,7 @@ public class AuthorService {
 	}
 
 	public AuthorResponse getOneAuthor(Long id) {
-		Author author = authorRepository.getById(id);
+		Author author = authorRepository.getReferenceById(id);
 		return modelMapper.map(author, AuthorResponse.class);
 	}
 

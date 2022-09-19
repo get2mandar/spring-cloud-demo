@@ -8,6 +8,13 @@ Find below the details of Initial Tech Stack used to develop the Applications an
 
 
 ### Tech Stack - Upgrade to Latest Version(s)
+
+> Updated as on 19-Sept-2022
+ - ~~JDK 11 - jdk-11.0.13~~  JDK 17 - jdk-17.0.1
+ - Spring Boot version ~~2.6.7~~  2.7.3
+ - Spring Cloud version ~~2021.0.0~~ 2021.0.3
+
+
 > Updated as on 13-May-2022
  - ~~JDK 8 - jdk1.8.0_121~~  JDK 11 - jdk-11.0.13
  - Apache Maven version ~~3.6.3~~  3.8.4

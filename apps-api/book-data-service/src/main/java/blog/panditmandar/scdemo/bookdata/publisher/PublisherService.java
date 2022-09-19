@@ -36,7 +36,7 @@ public class PublisherService {
 	}
 
 	public PublisherResponse getOnePublisher(Long id) {
-		Publisher publisher = publisherRepository.getById(id);
+		Publisher publisher = publisherRepository.getReferenceById(id);
 		return modelMapper.map(publisher, PublisherResponse.class);
 	}
 
