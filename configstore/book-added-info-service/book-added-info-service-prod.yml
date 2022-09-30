@@ -1,9 +1,0 @@
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-logging:
-  level:
-    blog.panditmandar.scdemo.bookinfo: INFO

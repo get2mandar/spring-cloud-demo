@@ -355,6 +355,23 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GET_AllBookInfo_viaEdgeGateway Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{edgeGatewayURL}}/bookinfo",
+									"host": [
+										"{{edgeGatewayURL}}"
+									],
+									"path": [
+										"bookinfo"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				}

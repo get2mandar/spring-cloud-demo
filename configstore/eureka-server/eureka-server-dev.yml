@@ -1,5 +1,0 @@
-server:
-  port: 9761
-logging:
-  level:
-    blog.panditmandar.scdemo.infra.eurekaserver: DEBUG

@@ -6,8 +6,7 @@ spring:
       server:
         git:
           default-label: main
-          search-paths:
-          - configstore/{application}
+          search-paths: '{application}'
 server:
   port: 8888
 logging:
