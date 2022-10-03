@@ -17,7 +17,7 @@ The Configuration files are stored in the separate Git Repository ```spring-clou
 It is a git managed and externalized from Config Server as well as externalized for other Applicaitons too.
 This gives flexibility to update the configuration in the background and refresh without restart of any API.
 
-__Note__: The Git Repository URL and User Credentials to access the Repository are provided at runtime. The required variables can be configured as Environment Variables, so those can be used to pass at runtime as values for ```config-server``` executable Jar.
+<ins>**_Note_**</ins>&nbsp;:- &nbsp;&nbsp;The Git Repository URL and User Credentials to access the Repository are provided at runtime. The required variables can be configured as Environment Variables, so those can be used to pass at runtime as values for ```config-server``` executable Jar.
 
  - **GH_SCDEMO_URI** - Spring Cloud Config Server Git URI
  - **GH_USER** - Spring Cloud Config Server Git Username
