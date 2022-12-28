@@ -3,3 +3,6 @@ spring:
     name: edge-gateway
   config:
     import: optional:configserver:http://localhost:8888
+# Reactive Type Needed for Admin Server to Work
+  main:
+    web-application-type: reactive

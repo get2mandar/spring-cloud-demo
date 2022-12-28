@@ -30,6 +30,14 @@ CD ../edge-gateway
 CALL %command%
 
 
+
+ECHO ------------
+ECHO admin-dashboard
+ECHO ------------
+CD ../admin-dash
+CALL %command%
+
+
 ECHO DONE
 :END
 pause

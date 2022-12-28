@@ -1,0 +1,10 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: admin-dash
+# Configs to make Spring Boot Admin a Secured Server
+  security:
+    user:
+      name: admin
+      password: admin
