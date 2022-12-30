@@ -10,6 +10,7 @@ Majorly all Applications are for Various Features in Non-Functional Areas that a
  - **config-server** - Spring Cloud Config Server with native configuration
  - **eureka-server** - Spring Cloud Eureka Discovery Server
  - **edge-gateway** - Spring Cloud API Gateway Server provides Routing for all the Internal Services
+ - **admin-dash** - Spring Boot Admin UI Application to View and Monitor All Services of Environment in Single Dashboard
 
 
 ### Git Repository Based Config Store
