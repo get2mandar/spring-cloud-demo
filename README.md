@@ -42,6 +42,7 @@ Below is the Table for details about Project Settings and Ports:
 
 
  - **API Services Applications**
+
 API Services Applications Can have Multiple Instances (max 3) so those Applications have multiple Ports.
  
 | **Artifact ID** | **Spring App Name** | **Root Package** | **Dev Port** | **Live Port** |
