@@ -9,7 +9,7 @@ SET apptype=apps-infra
 SET color=5F
 
 :: RUN config-server
-start cmd /c "CALL run-infra-config-server.bat"
+start cmd /c "CALL run-only-infra-config-server.bat"
 timeout /T 10 /NOBREAK>nul
 
 
@@ -28,11 +28,11 @@ if %env%==prod (
 	SET port=8250
 )
 start cmd /c "CALL run-service.bat edge-gateway %port% %apptype% %color%"
-:: timeout /T 10 /NOBREAK>nul
+timeout /T 10 /NOBREAK>nul
 
-:: ECHO RUN INFRA hystrix-dashboard %env%
-:: start cmd /c "CALL run-infra-hystrix-dashboard.bat"
-:: timeout /T 10 /NOBREAK>nul
+
+:: RUN admin-dashboard
+start cmd /c "CALL run-only-infra-admin-dash.bat"
 
 
 :END

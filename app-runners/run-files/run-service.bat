@@ -10,10 +10,6 @@ SET color=%~4
 
 COLOR %color%
 
-
-TITLE RUN %ServiceName%
-
-
 IF %env% EQU dev GOTO DEVPRT
 IF %env% EQU prod GOTO PRODPRT
 
