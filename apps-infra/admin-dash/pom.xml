@@ -26,7 +26,6 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-		<spring-cloud.version>2021.0.3</spring-cloud.version>
 		<spring-boot-admin.version>2.7.4</spring-boot-admin.version>
 		<spring-boot-admin-server-ui-login.version>1.5.7</spring-boot-admin-server-ui-login.version>
 	</properties>
