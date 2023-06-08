@@ -1,0 +1,22 @@
+<p>book-catalog-list works!</p>
+
+<h2>Books</h2>
+<hr />
+<hr />
+
+<div *ngFor="let book of books">
+  <h3>
+    <a [title]="book.title">
+      {{ book.title }}
+    </a>
+  </h3>
+
+  <p *ngIf="book.isbn13">ISBN-13: {{ book.isbn13 }}</p>
+
+  <p *ngIf="book.isbn10">ISBN-10: {{ book.isbn10 }}</p>
+
+  <button type="button" class="btn btn-outline-info" [routerLink]="['/book', book.isbn13]">View This Book</button>
+
+  <hr />
+  
+</div>
