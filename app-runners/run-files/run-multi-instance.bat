@@ -38,12 +38,10 @@ FOR /L %%G IN (1,1,%MAX%) DO (
 	
 	::NEW WAY TO RUN SAME APPS IN MULTIPLE TABS
 	SET "WT_VAR=!WT_VAR! run-service.bat %ServiceName% !Port! %apptype% %color%;"
-	ECHO !WT_VAR!
 	SET /A Port+=1
 )
 ::TRIM THE LAST SEMI COLON (ADDED FOR MULTIPLE TABS)
 wt !WT_VAR:~0,-1!
 endlocal
 
-pause
 :END
