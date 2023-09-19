@@ -10,7 +10,12 @@ if %env%==prod (
 	SET port=8290
 )
 
-TITLE RUN admin-dashboard %port%
+SET envprint=DEV
+if %env%==prod (
+	SET envprint=PROD
+)
+
+TITLE %envprint%-%port% admin-dashboard
 
 CD ../../apps-infra/admin-dash
 
