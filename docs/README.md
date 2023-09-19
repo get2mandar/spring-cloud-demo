@@ -6,8 +6,19 @@ Go Back to [DEMO-README](../README.md)
 ## Tech Stack - Updates
 Find below the details of Initial Tech Stack used to develop the Applications and over time, how the tech stack was upgraded to possible latest versions.
 
+```Note: The Updated As On details contain Only Modified or Newly Added updates, all others remain as is the previous ones.```
 
 ### Tech Stack - Upgrade to Latest Version(s)
+
+> Updated as on 19-Sept-2023
+ - Spring Boot version ~~2.7.3~~  2.7.15
+
+
+> Updated as on 22-June-2023 (New Added)
+ - NodeJS version 18.16.1
+ - NPM version 9.5.1
+ - Angular (for UI App) version 16.0.0
+
 
 > Updated as on 19-Sept-2022
  - ~~JDK 11 - jdk-11.0.13~~  JDK 17 - jdk-17.0.1

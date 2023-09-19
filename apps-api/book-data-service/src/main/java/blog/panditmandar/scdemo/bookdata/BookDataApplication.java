@@ -14,8 +14,8 @@ public class BookDataApplication {
 		SpringApplication.run(BookDataApplication.class, args);
 	}
 
-	@Bean
-	public ModelMapper getModelMapper() {
+    @Bean
+    ModelMapper getModelMapper() {
 		return new ModelMapper();
 	}
 

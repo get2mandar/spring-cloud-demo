@@ -18,8 +18,8 @@ import com.google.common.cache.CacheBuilder;
 @EnableCaching
 public class CatalogCacheConfiguration {
 
-	@Bean
-	public CacheManager cacheManager() {
+    @Bean
+    CacheManager cacheManager() {
 		ConcurrentMapCacheManager cacheManager = new ConcurrentMapCacheManager() {
 			@Override
 			protected Cache createConcurrentMapCache(final String name) {

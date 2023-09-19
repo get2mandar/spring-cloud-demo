@@ -22,5 +22,4 @@ public class BookResponse implements Serializable {
 	private String isbn13;
 	private String isbn10;
 	private String title;
-
 }

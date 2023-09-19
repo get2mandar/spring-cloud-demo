@@ -12,8 +12,8 @@ public class BookAddedInfoServiceApplication {
 		SpringApplication.run(BookAddedInfoServiceApplication.class, args);
 	}
 
-	@Bean
-	public ModelMapper getModelMapper() {
+    @Bean
+    ModelMapper getModelMapper() {
 		return new ModelMapper();
 	}
 

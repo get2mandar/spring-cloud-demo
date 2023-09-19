@@ -3,6 +3,8 @@ package blog.panditmandar.scdemo.admindash.configs;
 import java.util.UUID;
 
 import org.springframework.context.annotation.Bean;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -24,24 +26,21 @@ public class WebSecurityConfig {
 		this.adminServer = adminServer;
 	}
 
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    @Bean
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
 		successHandler.setTargetUrlParameter("redirectTo");
 		successHandler.setDefaultTargetUrl(this.adminServer.getContextPath() + "/");
-
-		http.authorizeRequests().antMatchers(this.adminServer.getContextPath() + "/assets/**").permitAll()
-				.antMatchers(this.adminServer.getContextPath() + "/login").permitAll().anyRequest().authenticated()
-				.and().formLogin().loginPage(this.adminServer.getContextPath() + "/login")
-				.successHandler(successHandler).and().logout().logoutUrl(this.adminServer.getContextPath() + "/logout")
-				.and().httpBasic().and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-				.ignoringRequestMatchers(
-						new AntPathRequestMatcher(this.adminServer.getContextPath() + "/instances",
-								HttpMethod.POST.toString()),
-						new AntPathRequestMatcher(this.adminServer.getContextPath() + "/instances/*",
-								HttpMethod.DELETE.toString()),
-						new AntPathRequestMatcher(this.adminServer.getContextPath() + "/actuator/**"))
-				.and().rememberMe().key(UUID.randomUUID().toString()).tokenValiditySeconds(1209600);
+        http.authorizeHttpRequests().antMatchers(this.adminServer.getContextPath() + "/assets/**").permitAll()
+                .antMatchers(this.adminServer.getContextPath() + "/login").permitAll().anyRequest().authenticated()
+                .and().formLogin(login -> login.loginPage(this.adminServer.getContextPath() + "/login")
+                .successHandler(successHandler)).logout(logout -> logout.logoutUrl(this.adminServer.getContextPath() + "/logout")).httpBasic(withDefaults()).csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                .ignoringRequestMatchers(
+                        new AntPathRequestMatcher(this.adminServer.getContextPath() + "/instances",
+                                HttpMethod.POST.toString()),
+                        new AntPathRequestMatcher(this.adminServer.getContextPath() + "/instances/*",
+                                HttpMethod.DELETE.toString()),
+                        new AntPathRequestMatcher(this.adminServer.getContextPath() + "/actuator/**"))).rememberMe(me -> me.key(UUID.randomUUID().toString()).tokenValiditySeconds(1209600));
 		return http.build();
 	}
 
