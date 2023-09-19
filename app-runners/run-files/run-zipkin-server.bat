@@ -1,0 +1,10 @@
+@ECHO OFF
+
+:BEGIN
+CLS
+TITLE RUN Zipkin-Server PORT:9411
+
+CALL java -jar %ZIPKIN_JAR_FILE%
+
+:END
+pause

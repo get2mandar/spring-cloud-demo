@@ -22,7 +22,7 @@ SET PRTMSG=PROD-%Port%
 GOTO RUNAPP
 
 :RUNAPP
-TITLE RUN %ServiceName% %PRTMSG%
+TITLE %PRTMSG% %ServiceName%
 
 CD ../../%AppType%/%ServiceName%
 
