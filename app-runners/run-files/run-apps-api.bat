@@ -27,19 +27,16 @@ if %env%==prod (
 )
 
 
-::BACKUP OLD WAY OF CALLING SERVICE APPS
+:: CALL SERVICE APPS
 :: RUN book-data-service
-::CALL run-multi-instance.bat book-data-service %book-data-port% %apptype% %color%
-::
+CALL run-multi-instance.bat book-data-service %book-data-port% %apptype% %color%
+
 :: RUN book-added-info-service
-::CALL run-multi-instance.bat book-added-info-service %book-info-port% %apptype% %color%
-::
+CALL run-multi-instance.bat book-added-info-service %book-info-port% %apptype% %color%
+
 :: RUN book-catalog-service
 ::start cmd /c "CALL run-service.bat book-catalog-service %catalog-port% %apptype% %color%"
-
-
-:: RUN book-data-service AND book-added-info-service AND book-catalog-service IN SAME WINDOW BUT MULTIPLE TABS
-wt run-multi-instance.bat book-data-service %book-data-port% %apptype% %color%; run-multi-instance.bat book-added-info-service %book-info-port% %apptype% %color%; run-multi-instance.bat  book-catalog-service %catalog-port% %apptype% %color%
+CALL run-multi-instance.bat book-catalog-service %catalog-port% %apptype% %color%
 
 
 :END

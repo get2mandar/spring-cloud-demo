@@ -8,9 +8,11 @@ TITLE RUN-INFRA %env%
 SET apptype=apps-infra
 SET color=5F
 
-:: RUN config-server (SEPARATE TAB)
+:: RUN config-server (SEPARATE WINDOW)
 start cmd /c "CALL run-only-infra-config-server.bat"
-timeout /T 10 /NOBREAK>nul
+
+:: RUN zipkin-server (SEPARATE WINDOW)
+start cmd /c "CALL run-zipkin-server.bat"
 
 
 :: SET PORT eureka-server
@@ -26,20 +28,16 @@ if %env%==prod (
 )
 
 
-::BACKUP OLD WAY OF CALLING SERVICE APPS
+:: CALL SERVICE APPS
 :: RUN eureka-server
-::start cmd /c "CALL run-service.bat eureka-server %eureka-port% %apptype% %color%"
-::timeout /T 10 /NOBREAK>nul
-::
+start cmd /c "CALL run-service.bat eureka-server %eureka-port% %apptype% %color%"
+timeout /T 5 /NOBREAK>nul
+
 :: RUN edge-gateway
-::start cmd /c "CALL run-service.bat edge-gateway %gateway-port% %apptype% %color%"
-::timeout /T 10 /NOBREAK>nul
-::
+start cmd /c "CALL run-service.bat edge-gateway %gateway-port% %apptype% %color%"
+timeout /T 5 /NOBREAK>nul
+
 :: RUN admin-dashboard
-::start cmd /c "CALL run-only-infra-admin-dash.bat"
-
-
-:: RUN eureka-server AND edge-gateway AND admin-dashboard IN SAME WINDOW BUT MULTIPLE TABS
-wt run-service.bat eureka-server %eureka-port% %apptype% %color%; run-service.bat edge-gateway %gateway-port% %apptype% %color%; run-only-infra-admin-dash.bat
+start cmd /c "CALL run-only-infra-admin-dash.bat"
 
 :END

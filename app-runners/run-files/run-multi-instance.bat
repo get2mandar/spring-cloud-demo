@@ -8,9 +8,6 @@ SET /A Port=%~2
 SET AppType=%~3
 SET color=%~4
 
-::ADDED FOR MULTIPLE TABS
-SET WT_VAR=
-
 COLOR %color%
 GOTO INPUT_MAX
 
@@ -28,20 +25,13 @@ IF %MAX_NUM% EQU %MAX% (
 	GOTO INPUT_MAX
 )
 
-
 setlocal enableDelayedExpansion
 FOR /L %%G IN (1,1,%MAX%) DO (
-	::OLD WAY OF RUNNING INDIVIDUAL SERVICE APPS
-	:: start cmd /c "CALL run-service.bat %ServiceName% !Port! %apptype% %color%"
-	:: SET /A Port+=1
-	:: timeout /T 5 /NOBREAK>nul
-	
-	::NEW WAY TO RUN SAME APPS IN MULTIPLE TABS
-	SET "WT_VAR=!WT_VAR! run-service.bat %ServiceName% !Port! %apptype% %color%;"
+	:: RUN INDIVIDUAL SERVICE APPS
+	start cmd /c "CALL run-service.bat %ServiceName% !Port! %apptype% %color%"
 	SET /A Port+=1
+	timeout /T 5 /NOBREAK>nul
 )
-::TRIM THE LAST SEMI COLON (ADDED FOR MULTIPLE TABS)
-wt !WT_VAR:~0,-1!
 endlocal
 
 :END
