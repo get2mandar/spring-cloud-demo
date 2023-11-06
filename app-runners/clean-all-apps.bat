@@ -31,6 +31,13 @@ CD ../edge-gateway
 CALL %command%
 
 
+ECHO ------------
+ECHO admin-dash
+ECHO ------------
+CD ../admin-dash
+CALL %command%
+
+
 ECHO .
 timeout /T 5 /NOBREAK>nul
 ECHO .
