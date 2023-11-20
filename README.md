@@ -9,7 +9,7 @@ Find the details of Technology Stack used to develop the Applications in this De
 ## Project Settings
 Common Group ID for All Applications in Spring Cloud Demo
 
- - **Group ID** - blog.panditmandar.scdemo
+ - **Group ID** - com.wp.panditmandar.scdemo
 
 The Artifact and Port details for all the Applications are listed in their specific README files ( _as mentioned below_ ).
 
@@ -35,10 +35,10 @@ Below is the Table for details about Project Settings and Ports:
 
 | **Artifact ID** | **Spring App Name** | **Root Package** | **Dev Port** | **Live Port** |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| config-server | config-server | blog.panditmandar.scdemo.infra.configserver | 8888 | same as Dev |
-| eureka-server | eureka-server | blog.panditmandar.scdemo.infra.eurekaserver | 9761 | 8761 |
-| edge-gateway | edge-gateway | blog.panditmandar.scdemo.edge.gateway | 9050 | 8250 |
-| admin-dash | admin-dash | blog.panditmandar.scdemo.admindash | 9090 | 8290 |
+| config-server | config-server | com.wp.panditmandar.scdemo.configserver | 8888 | same as Dev |
+| eureka-server | eureka-server | com.wp.panditmandar.scdemo.eurekaserver | 9761 | 8761 |
+| edge-gateway | edge-gateway | com.wp.panditmandar.scdemo.edgegateway | 9050 | 8250 |
+| admin-dash | admin-dash | com.wp.panditmandar.scdemo.admindash | 9090 | 8290 |
 
 
  - **API Services Applications**
@@ -47,9 +47,9 @@ API Services Applications Can have Multiple Instances (max 3) so those Applicati
  
 | **Artifact ID** | **Spring App Name** | **Root Package** | **Dev Port** | **Live Port** |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
-| book-data-service | book-data-service | blog.panditmandar.scdemo.bookdata | 9081/2/3 | 8281/2/3 |
-| book-added-info-service | book-added-info-service | blog.panditmandar.scdemo.bookinfo | 9071/2/3 | 8271/2/3 |
-| book-catalog-service | book-catalog-service | blog.panditmandar.scdemo.bookcatalog | 9061/2/3 | 8261/2/3 |
+| book-data-service | book-data-service | com.wp.panditmandar.scdemo.bookdata | 9081/2/3 | 8281/2/3 |
+| book-added-info-service | book-added-info-service | com.wp.panditmandar.scdemo.bookinfo | 9071/2/3 | 8271/2/3 |
+| book-catalog-service | book-catalog-service | com.wp.panditmandar.scdemo.bookcatalog | 9061/2/3 | 8261/2/3 |
 
 
 ## Execute Demo

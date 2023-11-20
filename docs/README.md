@@ -10,11 +10,12 @@ Find below the details of Initial Tech Stack used to develop the Applications an
 
 ### Tech Stack - Upgrade to Latest Version(s)
 
+> Updated as on 20-Nov-2023
+ - Spring Boot version ~~2.7.15~~  2.7.17
+
+
 > Updated as on 19-Sept-2023
  - Apache Maven version ~~3.8.4~~  3.9.5
-
-
-> Updated as on 19-Sept-2023
  - Spring Boot version ~~2.7.3~~  2.7.15
 
 

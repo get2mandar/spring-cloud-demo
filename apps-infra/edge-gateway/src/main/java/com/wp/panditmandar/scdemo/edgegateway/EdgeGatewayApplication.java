@@ -1,4 +1,4 @@
-package com.wp.panditmandar.scdemo.edge.gateway;
+package com.wp.panditmandar.scdemo.edgegateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
