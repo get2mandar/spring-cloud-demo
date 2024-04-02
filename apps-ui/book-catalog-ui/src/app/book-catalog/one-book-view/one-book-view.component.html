@@ -1,0 +1,18 @@
+<p>one-book-view works!</p>
+
+<button type="button" class="btn btn-outline-info" [routerLink]="['/']">Back</button>
+<br><br>
+
+<div class="card">
+    <div class="card-body">
+        <span>Book Title</span>
+        <h5 class="card-title">
+            <span *ngIf="loadedCatalogBook.title">{{ loadedCatalogBook.title }}</span>
+        </h5>
+        <br>
+        <h6 class="card-subtitle">ISBN-13&nbsp;::&nbsp;&nbsp;{{ loadedCatalogBook.isbn13 }}</h6>
+        <br>
+        <p *ngIf="loadedCatalogBook.isbn10" class="card-text">ISBN-10&nbsp;::&nbsp;&nbsp;{{ loadedCatalogBook.isbn10 }}
+        </p>
+    </div>
+</div>
