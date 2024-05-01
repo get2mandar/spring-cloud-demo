@@ -10,10 +10,11 @@ SET color=5F
 
 :: RUN config-server (SEPARATE WINDOW)
 start cmd /c "CALL run-only-infra-config-server.bat"
+timeout /T 5 /NOBREAK>nul
 
 :: RUN zipkin-server (SEPARATE WINDOW)
 start cmd /c "CALL run-zipkin-server.bat"
-
+timeout /T 5 /NOBREAK>nul
 
 :: SET PORT eureka-server
 SET eureka-port=9761
