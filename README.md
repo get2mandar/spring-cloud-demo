@@ -63,3 +63,8 @@ Read more details on how to compile and run the various services in this Demo wi
  - With Postman Client
 
 Use the files from ```postman-files``` to run the APIs using a Postman API Testing Tool.
+
+
+ - Swagger OpenAPI Documentation on API Gateway
+
+Use the URL like ```http://<host:edge-gateway-port>/webjars/swagger-ui/index.html``` to run the APIs Swagger OpenAPI documentation in browser.
