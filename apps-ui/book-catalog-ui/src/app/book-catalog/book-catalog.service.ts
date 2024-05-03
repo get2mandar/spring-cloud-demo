@@ -27,7 +27,7 @@ export class BookCatalogService {
     getOneBook(isbn13: string) {
         return this.http
             .get<Book>(
-                'http://localhost:9081/books/' + isbn13
+                'http://localhost:9050/catalog/books/' + isbn13
             ).pipe(map(responseData => {
                 const oneBook: Book = {
                     isbn13: responseData.isbn13,
