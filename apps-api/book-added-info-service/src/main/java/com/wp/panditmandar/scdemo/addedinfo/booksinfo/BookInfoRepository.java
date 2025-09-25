@@ -1,4 +1,4 @@
-package com.wp.panditmandar.scdemo.addedinfo.bookinfo;
+package com.wp.panditmandar.scdemo.addedinfo.booksinfo;
 
 import javax.transaction.Transactional;
 

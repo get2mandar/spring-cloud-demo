@@ -1,13 +1,11 @@
-package com.wp.panditmandar.scdemo.addedinfo.bookinfo;
-
-import com.wp.panditmandar.scdemo.addedinfo.binding.BookBinding;
+package com.wp.panditmandar.scdemo.addedinfo.booksinfo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * API Response for All Book Added Info
+ * API Request for Create or Update Book Added Info
  * 
  * @author Mandar Pandit
  *
@@ -15,13 +13,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookInfoResponse {
+public class BookInfoRequest {
 
 	private String isbn13;
 	private Byte edition;
 	private Short pages;
 	private String language;
 	private String published;
-	private BookBinding binding;
+	private Long bindingid;
 
 }

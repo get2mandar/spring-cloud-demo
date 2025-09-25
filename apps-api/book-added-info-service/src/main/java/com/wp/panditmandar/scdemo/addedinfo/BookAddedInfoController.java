@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wp.panditmandar.scdemo.addedinfo.bookinfo.BookAddedInfoService;
-import com.wp.panditmandar.scdemo.addedinfo.bookinfo.BookInfoResponse;
+import com.wp.panditmandar.scdemo.addedinfo.booksinfo.BookAddedInfoService;
+import com.wp.panditmandar.scdemo.addedinfo.booksinfo.BookInfoResponse;
 
 /**
  * Books Added Info Controller for All Books Additional Details CRUD
@@ -19,7 +19,7 @@ import com.wp.panditmandar.scdemo.addedinfo.bookinfo.BookInfoResponse;
  *
  */
 @RestController
-@RequestMapping(path = "/bookinfo")
+@RequestMapping(path = "/booksinfo")
 public class BookAddedInfoController {
 
 	@Autowired
