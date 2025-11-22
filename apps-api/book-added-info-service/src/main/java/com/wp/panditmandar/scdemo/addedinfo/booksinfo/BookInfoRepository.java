@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  */
 @Transactional
-public interface BookInfoRepository extends JpaRepository<BookInfo, Long> {
+public interface BookInfoRepository extends JpaRepository<BookInfo, String> {
 
 	/**
 	 * Find Book by ISBN13

@@ -56,7 +56,7 @@ public class BookDataController {
 	}
 
 	@GetMapping(path = "/publishers/{publisherid}")
-	public ResponseEntity<PublisherResponse> getPublisher(@PathVariable("publisherid") Long publisherid) {
+	public ResponseEntity<PublisherResponse> getPublisher(@PathVariable() Long publisherid) {
 		PublisherResponse publisherResponse = publisherService.getOnePublisher(publisherid);
 		if (publisherResponse == null) {
 			return ResponseEntity.notFound().build();
@@ -77,7 +77,7 @@ public class BookDataController {
 	}
 
 	@GetMapping(path = "/authors/{authorid}")
-	public ResponseEntity<AuthorResponse> getAuthor(@PathVariable("authorid") Long authorid) {
+	public ResponseEntity<AuthorResponse> getAuthor(@PathVariable() Long authorid) {
 		AuthorResponse authorResponse = authorService.getOneAuthor(authorid);
 		if (authorResponse == null) {
 			return ResponseEntity.notFound().build();
@@ -104,7 +104,7 @@ public class BookDataController {
 	}
 
 	@GetMapping(path = "/books/{isbn}")
-	public ResponseEntity<BookResponse> getBook(@PathVariable("isbn") String isbn) {
+	public ResponseEntity<BookResponse> getBook(@PathVariable String isbn) {
 		BookResponse bookResponse = bookService.getOneBookByISBN(isbn);
 		if (bookResponse == null) {
 			return ResponseEntity.notFound().build();

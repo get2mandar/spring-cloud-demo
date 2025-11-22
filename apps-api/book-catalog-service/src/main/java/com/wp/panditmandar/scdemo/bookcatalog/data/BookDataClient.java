@@ -15,5 +15,5 @@ public interface BookDataClient {
 	List<BookResponse> getBooks();
 
 	@GetMapping("/books/{isbn}")
-	BookResponse getBook(@PathVariable("isbn") String isbn);
+	BookResponse getBook(@PathVariable String isbn);
 }

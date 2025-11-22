@@ -6,7 +6,7 @@ COLOR 5F
 TITLE 8888 config-server git-default
 
 SET YYYY_MM_DD=%date:~6,4%-%date:~3,2%-%date:~0,2%
-SET LOG_FILE=C:\WORKDATA\StudySpace\SCDemo\AppLogs\run-logs\config-server-%YYYY_MM_DD%.log
+SET LOG_FILE=%GH_SCDEMO_APPLOGS%\run-logs\config-server-8888-%YYYY_MM_DD%.log
 
 ECHO Find Logs Here: %LOG_FILE%
 

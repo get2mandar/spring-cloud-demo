@@ -32,7 +32,7 @@ public class BookAddedInfoController {
 	}
 
 	@GetMapping(path = "/{isbn}")
-	public ResponseEntity<BookInfoResponse> getBookAddedInfo(@PathVariable("isbn") String isbn) {
+	public ResponseEntity<BookInfoResponse> getBookAddedInfo(@PathVariable String isbn) {
 		BookInfoResponse bookInfo = bookAddedInfoService.getOneBookInfoByISBN(isbn);
 		if (bookInfo == null) {
 			return ResponseEntity.notFound().build();

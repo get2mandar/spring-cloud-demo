@@ -26,7 +26,7 @@ public class BookCatalogController {
 	}
 
 	@GetMapping("/books/{isbn}")
-	public BookResponse getBook(@PathVariable("isbn") String isbn) {
+	public BookResponse getBook(@PathVariable String isbn) {
 		return bookDataClient.getBook(isbn);
 	}
 }

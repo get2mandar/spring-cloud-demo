@@ -15,5 +15,5 @@ public interface BookAddedInfoClient {
 	List<BookInfoResopnse> getAllBookAddedInfo();
 
 	@GetMapping("/booksinfo/{isbn}")
-	BookInfoResopnse getBookAddedInfo(@PathVariable("isbn") String isbn);
+	BookInfoResopnse getBookAddedInfo(@PathVariable String isbn);
 }

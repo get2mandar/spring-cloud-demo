@@ -24,6 +24,12 @@ GOTO RUNAPP
 :RUNAPP
 TITLE %PRTMSG% %ServiceName%
 
+SET YYYY_MM_DD=%date:~6,4%-%date:~3,2%-%date:~0,2%
+SET LOG_FILE=%GH_SCDEMO_APPLOGS%\run-logs\%ServiceName%-%Port%-%YYYY_MM_DD%.log
+
+ECHO Find Logs Here: %LOG_FILE%
+
+> %LOG_FILE% (
 CD ../../%AppType%/%ServiceName%
 
 CALL java -jar -Dspring.profiles.active=%env% -Dserver.port=%Port% -XX:+UseSerialGC -Xss512k target\%ServiceName%-0.1.jar
@@ -31,3 +37,4 @@ CALL java -jar -Dspring.profiles.active=%env% -Dserver.port=%Port% -XX:+UseSeria
 
 :END
 pause
+)
